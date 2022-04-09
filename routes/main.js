@@ -5,11 +5,11 @@ var fetch = require('node-fetch');
 var express = require('express');
 var router = express.Router();
 
-router.get('/', (req, res) => {
+/*router.get('/', (req, res) => {
     res.sendFile(__path + '/views/home.html')
-})
+})*/
 
-router.get('/docs', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(__path + '/views/index.html')
 })
 
@@ -21,7 +21,7 @@ router.get('/api/tutorial', (req, res) => {
     res.sendFile(__path + '/views/tutorial.html')
 })
 
-router.get('/api/status', async(req, res) => {  
+router.get('/status', async(req, res) => {  
 
 var date = new Date
 var jam = date.getHours()
