@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     res.sendFile(__path + '/views/home.html')
 })
 
-router.get('/api', (req, res) => {
+router.get('/docs', (req, res) => {
     res.sendFile(__path + '/views/index.html')
 })
 
@@ -43,8 +43,8 @@ var port = process.env.PORT || 8080 || 5000 || 3000
         uptime: muptime(process.uptime()),
         speed: `${neww - old}ms`,
         info:{       
-            owner: 'alpin',            
-            apikey: 'Chat Owner: https://wa.me/6289690719275'
+            owner: 'RizFurr',            
+            apikey: 'beta'
         }
     }
     res.json(status)
