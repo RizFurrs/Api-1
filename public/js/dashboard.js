@@ -49,7 +49,7 @@ txt += "<p><b>Vendor</b>: " + navigator.vendor + "</p>";
 txt += "<p><b>Browser Online</b>: " + navigator.onLine + "</p>";
 txt += "<p><b>Cookies</b>: " + navigator.cookieEnabled + "</p>";
 txt += "<p><b>Platform</b>: " + navigator.platform + "</p>";
-txt += "<p><b>User Agent</b>: <br>" + navigator.userAgent + "</p>";
+
 
 myMonths = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
 myDays = ['Minggu','Senin','Selasa','Rabu','Kamis','Jum-at','Sabtu'];
