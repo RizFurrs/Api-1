@@ -1,27 +1,6 @@
-// Jika ada bug / eror mohon maklumi om , ini cuma latihan buat sy untuk belajar dikit" soal programing
-// Gada reupload" 😏
-// Klo mau colong fitur, jgn asal colong bodoh ntr api eror
-
-// Thanks to ( jgn di hapus jamet)
-/*
-<p> Eka Danuarta</p>
-<p> Ojan</p>
-<p> Farhan</p>
-<p> ZeeoneOfc </p>
-<p> ALL HUMAN</p>
-*/
 __path = process.cwd()
 
-//var aexm = require('@lolikillers/aexm-api');
 var express = require('express');
-var db = require(__path + '/database/db');
-try {
-var kuhong = db.get('ojan'); // jan diubah
-} catch (e) {
-	console.log('WELCOME TO MY API!') // boleh diubah
-}
-
-
 var axios = require('axios');
 var qs = require('qs');
 var ytdl = require('ytdl-core');
@@ -34,8 +13,8 @@ var cheerio = require('cheerio');
 var request = require('request');
 var fs = require('fs');
 var router  = express.Router();
-var creator = 'ZeeoneOfc' // ubah jadi nama lu
-const listkey = ["Alphabot","Zeeone","ZeeoneOfc"]; // ubah apikey nya, tambah aja klo mau
+var creator = 'RizFurr' // ubah jadi nama lu
+const listkey = ["uwu","beta"]; // ubah apikey nya, tambah aja klo mau
 
 var { otakudesu, covid, ongoing, komiku, tebakgambar, surah, sholat, lirik, chara,wattpad, playstore, linkwa, pinterest ,igdl,igstory, igstalk,twitter,fbdown,youtube,ttdownloader} = require(__path + '/lib/scrape.js');
 var { color, bgcolor } = require(__path + '/lib/color.js');
@@ -90,71 +69,9 @@ var len = 15
             randomlagi += arr[Math.floor(Math.random() * arr.length)];
         }
 
-        var randomTextNumber = random+randomlagi+'---------Apriliya-Putri-Fatmawati'+'LOLI--KILLERS';
+        var randomTextNumber = random+randomlagi+'---------RizFurr'+'encFurr';
         
- 
- async function cekApiKey(api) {
- 	ap = await lolkill.findOne({apikey:api})
- return ap;
- }
- 
- router.get('/addapikey', (req, res, next) => {
-    var apikey = req.query.apikey,
-        apikeyInput  = req.query.apikeyInput,
-        email = req.query.email;
-
-    if (!apikey) return res.json(loghandler.apikey)
-    if (!(apikeyInput && email)) return res.json(loghandler.notAddApiKey)
-    if (apikey != `${keyapi}`) return res.json(loghandler.invalidKey)
-
-    try {
-        lolkill.insert({
-            apikey: apikeyInput,
-            email: email
-        })
-        .then(() => {
-              res.json({
-                  status: true,
-                  creator: `${creator}`,
-                  result: 'berhasil menambah data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
-              })
-        })
-    } catch (e) {
-        console.log(e)
-        res.json(loghandler.error)
-    }
-})
-
-router.get('/cekapikey', async (req, res, next) => {
-	var apikeyInput = req.query.apikey
-	if(!apikeyInput) return res.json(loghandler.apikey)
-	a = await cekApiKey(apikeyInput)
-	if (a) {
-	json = JSON.stringify({
-		status: true,
-		creator: creator,
-		result: {
-            status:a.status,
-			id: a._id,
-			apikey: a.apikey,
-			more_info: {
-				email: a.email,
-				nomor_hp: a.nomor_hp,
-				name: a.name,
-				age: a.age,
-				country: a.country,
-				exp:a.exp,
-			},
-		},
-		message: `jangan lupa follow ${creator}`
-	})
-} else {
-	json = JSON.stringify({
-		status: false
-	})
-}
-res.send(JSON.parse(json))
-})
+    
 // cecan
 router.get('/cecan/china', async (req, res, next) => {
           var apikey = req.query.apikey
