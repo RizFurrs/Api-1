@@ -31,7 +31,7 @@ xhr.send();
 // Visitor
 function getvisitor(){
     var xhr = new XMLHttpRequest();
-    var url = 'https://api.countapi.xyz/hit/api-alphabot.herokuapp.com/visits';
+    var url = 'https://api.countapi.xyz/hit/rizfurr-api.herokuapp.com/visits';
     xhr.onloadend = function(){
     data = JSON.parse(this.responseText);
     document.getElementById("visits").textContent = data.value
@@ -52,7 +52,7 @@ txt += "<p><b>Platform</b>: " + navigator.platform + "</p>";
 txt += "<p><b>User Agent</b>: <br>" + navigator.userAgent + "</p>";
 
 myMonths = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
-myDays = ['Minggu','Senin','Selasa','Rabu','Kamis','Jum at','Sabtu'];
+myDays = ['Minggu','Senin','Selasa','Rabu','Kamis','Jum-at','Sabtu'];
 var tgl = new Date();
 var day = tgl.getDate()
 bulan = tgl.getMonth()
@@ -72,13 +72,13 @@ Sayings = "";
 			var now = new Date();
 			var hours = now.getHours();
 			if (hours >= 17 || hours <= 2){
-			Sayings += "<span class='text-light'>Selamat malam 🌚</span>"
+			Sayings += "<span class='text-light'>Selamat Malam UwU</span>"
 			} else if (hours >= 3 && hours <= 10){
-			Sayings += "<span class='text-info'>Selamat pagi 🌝</span>"
+			Sayings += "<span class='text-info'>Selamat Pagi UwU</span>"
 			} else if (hours >= 11 && hours <= 14){
-			Sayings += "<span class='text-warning'>Selamat Siang 🌞</span>"
+			Sayings += "<span class='text-warning'>Selamat Siang X3</span>"
 			} else if (hours >= 13 && hours <= 16){
-			Sayings += "<span class='text-success'>Selamat Sore 🌜</span>"
+			Sayings += "<span class='text-success'>Selamat Sore OwO</span>"
 			}
 document.getElementById("Ucapan").innerHTML = Sayings;
 
